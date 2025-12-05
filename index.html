@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AR Bear</title>
+    <script type="module" 
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+  </head>
+
+  <body style="margin:0; background:#000;">
+    <model-viewer 
+      src="bearroom.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      auto-rotate
+      style="width:100vw; height:100vh;">
+    </model-viewer>
+
+    <audio id="music" src="music.mp3"></audio>
+
+    <button onclick="document.getElementById('music').play()"
+      style="position: fixed; bottom: 20px; left: 20px; padding: 12px 20px; font-size: 18px;">
+      ▶ 播放音乐
+    </button>
+  </body>
+</html>
